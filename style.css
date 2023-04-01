@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20px 20px 100px 20px;
+    padding: 40px 60px 40px 40px;
+}
+
+.date-container {
+    display: flex;
+    gap: 50px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+
+.date-container span,
+.date-container input {
+    display: block;
+    color: gray;
+}
+
+input {
+    width: 150px;
+    padding: 10px;
+    font-size: 2rem;
+    border: none;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: 1px solid rgb(134 76 255);
+}
+
+.date-container span {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.date-container .errorInfo {
+    color: red;
+    font-size: 15px;
+    margin-top: 10px;
+    display: none;
+}
+
+input.error + .errorInfo {
+    display: block;
+    animation: shake 0.1s;
+}
+@keyframes shake {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(10px);}
+    70% {transform: translateX(-10px);}
+    100% {transform: translateX(0px);}
+
+}
+
+button {
+    border: none;
+    background: rgb(134 76 255);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 70px;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+.results {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.results span,
+.results p {
+    font-size: 5rem;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.results span {
+    color: rgb(134 76 255);
+}
+
